@@ -1,5 +1,5 @@
 <?php
-// created: 2017-09-27 11:48:06
+// created: 2017-09-27 12:07:03
 $sugar_config = array (
   'additional_js_config' => 
   array (
@@ -200,6 +200,7 @@ $sugar_config = array (
   'default_user_is_admin' => false,
   'default_user_name' => '',
   'demoData' => 'no',
+  'developerMode' => false,
   'diagnostic_file_max_lifetime' => 604800,
   'disable_convert_lead' => false,
   'disable_export' => false,
@@ -240,8 +241,8 @@ $sugar_config = array (
     'max_retries' => 5,
     'timeout' => 3600,
   ),
-  'js_custom_version' => '',
-  'js_lang_version' => 1,
+  'js_custom_version' => 1,
+  'js_lang_version' => 5,
   'languages' => 
   array (
     'en_us' => 'English (US)',

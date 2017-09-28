@@ -382,6 +382,22 @@
       'relationship' => 'kbcontents_tags',
       'source' => 'non-db',
     ),
+    'key2_courses_link' => 
+    array (
+      'name' => 'key2_courses_link',
+      'vname' => 'key2_courses',
+      'type' => 'link',
+      'relationship' => 'key2_courses_tags',
+      'source' => 'non-db',
+    ),
+    'key2_students_link' => 
+    array (
+      'name' => 'key2_students_link',
+      'vname' => 'key2_students',
+      'type' => 'link',
+      'relationship' => 'key2_students_tags',
+      'source' => 'non-db',
+    ),
     'following' => 
     array (
       'massupdate' => false,

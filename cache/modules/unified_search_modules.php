@@ -1,5 +1,5 @@
 <?php
-// created: 2017-09-27 11:48:10
+// created: 2017-09-28 06:48:59
 $unified_search_modules = array (
   'Accounts' => 
   array (
@@ -440,6 +440,65 @@ $unified_search_modules = array (
           1 => 'contacts.last_name',
         ),
         'force_unifiedsearch' => true,
+      ),
+    ),
+    'default' => false,
+  ),
+  'key2_courses' => 
+  array (
+    'fields' => 
+    array (
+      'first_name' => 
+      array (
+        'query_type' => 'default',
+      ),
+      'last_name' => 
+      array (
+        'query_type' => 'default',
+      ),
+      'phone' => 
+      array (
+        'query_type' => 'default',
+        'db_field' => 
+        array (
+          0 => 'phone_mobile',
+          1 => 'phone_work',
+          2 => 'phone_other',
+          3 => 'phone_fax',
+          4 => 'assistant_phone',
+        ),
+      ),
+      'email' => 
+      array (
+        'query_type' => 'default',
+        'operator' => 'subquery',
+        'subquery' => 'SELECT eabr.bean_id FROM email_addr_bean_rel eabr JOIN email_addresses ea ON (ea.id = eabr.email_address_id) WHERE eabr.deleted=0 AND ea.email_address LIKE',
+        'db_field' => 
+        array (
+          0 => 'id',
+        ),
+        'vname' => 'LBL_ANY_EMAIL',
+      ),
+      'search_name' => 
+      array (
+        'query_type' => 'default',
+        'db_field' => 
+        array (
+          0 => 'first_name',
+          1 => 'last_name',
+        ),
+        'force_unifiedsearch' => true,
+      ),
+    ),
+    'default' => false,
+  ),
+  'key2_students' => 
+  array (
+    'fields' => 
+    array (
+      'name' => 
+      array (
+        'query_type' => 'default',
       ),
     ),
     'default' => false,
